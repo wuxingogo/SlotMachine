@@ -1,17 +1,16 @@
 //
-// SlotMachine.h
-// TestSpine
+// TestLayer.h
+// slotMachine
 //
-// Created by ly on 15/3/25.
+// Created by ly on 15/3/26.
 //
 //
 
-#ifndef __TestSpine__SlotMachine__
-#define __TestSpine__SlotMachine__
+#ifndef __slotMachine__TestLayer__
+#define __slotMachine__TestLayer__
 
 #include "cocos2d.h"
 USING_NS_CC;
-
 
 /**
  *　　　　　　　　┏┓　┏┓+ +
@@ -37,34 +36,18 @@ USING_NS_CC;
  *　　　　　　　　　　┗┻┛　┗┻┛+ + + +
  */
 
-class SlotMachine : public Layer
+class TestLayer : public Layer
 {
 public:
-    SlotMachine();
-    ~SlotMachine();
+    TestLayer();
+    ~TestLayer();
     static Scene* createScene();
     virtual bool init();
-    CREATE_FUNC(SlotMachine);
+    CREATE_FUNC(TestLayer);
     
-    Sprite * listViewSp[10];
-    
-    Node * listView;
-    
-    void toReward(cocos2d::Ref* pSender);
-    void update(float dt);
-    
-    float startTime;
-    
-    /*!
-     *  @author wuxingogo, 15-03-25 19:03:14
-     *
-     *  @brief  up is true, down is false
-     */
-    bool speedup;
-    
-    int myTag;
+    void reward();
 private:
     void initData();
 };
 
-#endif /* defined(__TestSpine__SlotMachine__) */
+#endif /* defined(__slotMachine__TestLayer__) */
